@@ -9,12 +9,21 @@ import About from "./About";
 import Missing from "./Missing";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { DataProvider } from "./context/DataContext";
+import axios from "axios";
 
-// This is a test commit
 function App() {
+  const fetchData = async () => {
+    const response = await axios.get(
+      "https://jsonplaceholder.typicode.com/posts"
+    );
+    const data = response.data;
+    console.log(JSON.stringify(data));
+  };
+  fetchData();
+
   return (
     <div className="App">
-      <Header title="React JS Blog" />
+      <Header title="ReactQuill Chronicles" />
       <DataProvider>
         <Router>
           <Nav />
