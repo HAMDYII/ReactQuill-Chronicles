@@ -1,5 +1,5 @@
 import { useState, useEffect, useContext } from "react";
-import { useParams, Link } from "react-router-dom";
+import { useParams, Link, useNavigate } from "react-router-dom";
 import api from "./api/posts";
 import { format } from "date-fns";
 import DataContext from "./context/DataContext";
@@ -10,6 +10,7 @@ const EditPost = () => {
   const { posts, setPosts } = useContext(DataContext);
   const { id } = useParams();
   const post = posts.find((post) => post.id.toString() === id);
+  const navigate = useNavigate();
 
   useEffect(() => {
     if (post) {
@@ -54,7 +55,13 @@ const EditPost = () => {
               value={editBody}
               onChange={(e) => setEditBody(e.target.value)}
             />
-            <button type="submit" onClick={() => handleEdit(post.id)}>
+            <button
+              type="submit"
+              onClick={() => {
+                handleEdit(post.id);
+                navigate("/");
+              }}
+            >
               Submit
             </button>
           </form>

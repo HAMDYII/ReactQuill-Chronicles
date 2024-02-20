@@ -2,11 +2,13 @@ import { useState, useContext } from "react";
 import { format } from "date-fns";
 import api from "./api/posts";
 import DataContext from "./context/DataContext";
+import { useNavigate } from "react-router-dom";
 
 const NewPost = () => {
   const [postTitle, setPostTitle] = useState("");
   const [postBody, setPostBody] = useState("");
   const { posts, setPosts } = useContext(DataContext);
+  const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -19,6 +21,7 @@ const NewPost = () => {
       setPosts(allPosts);
       setPostTitle("");
       setPostBody("");
+      navigate("/");
     } catch (err) {
       console.log(`Error: ${err.message}`);
     }

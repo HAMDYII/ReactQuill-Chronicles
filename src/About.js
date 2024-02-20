@@ -3,7 +3,8 @@ const About = () => {
     <main className="About">
       <h2>About</h2>
       <p style={{ marginTop: "1rem" }}>
-        This blog app is a project in the Learn React tutorial series.
+        ReactQuill Chronicles is a responsive blog post application written in
+        React JS.
       </p>
     </main>
   );
