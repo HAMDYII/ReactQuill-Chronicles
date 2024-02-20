@@ -12,7 +12,9 @@ Implements seamless navigation with React Router DOM to create a multi-page blog
 ## Demo
 
 Please note: 
+<br/>
 1.showing the search functionality is at the end of the demo!
+<br/>
 2.this is gif so the quality isn't the best this isn't from the app, it's because of the gif quality due to github restrictions on videos.
 
 ![screen-gif](./images/demo.gif)
