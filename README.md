@@ -5,7 +5,7 @@ ReactQuill Chronicles is a dynamic blog post application built using the React f
 ## Technologies & Design Approach
 
 Implements seamless navigation with React Router DOM to create a multi-page blog experience
-, Utilizes Axios for efficient data fetching, Integrates asynchronous requests to fetch blog post content from a designated API.
+, Utilizes Axios for efficient data fetching, Integrates asynchronous requests to fetch blog post content from a designated API
 , Showcasing the use of CRUD operations to for making a dynamic user experience.
 
 
